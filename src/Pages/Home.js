@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchActive, setIsSearchActive] = useState(false);
-  const [recipes, setRecipes] = useState([]); // This will store the updated list after deletion
+  const [recipes, setRecipes] = useState([]); 
 
   const {
     data: recipe = [],
@@ -13,7 +13,7 @@ const Home = () => {
     error,
   } = useFetch("http://localhost:3005/recipes");
 
-  // Update state when data is fetched
+
   useEffect(() => {
     setRecipes(recipe);
   }, [recipe]);
